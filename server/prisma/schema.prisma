@@ -1,0 +1,26 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    // provider = "postgresql"
+    // url      = env("DATABASE_URL")
+    provider = "sqlite"
+    url      = "file:./dev.db"
+}
+
+model User {
+    id           Int      @id @default(autoincrement()) // autoincrement() 하나로 자동증가 가능(int)
+    username     String   @unique // 유저이름은 유니크 해야하니까
+    passwordHash String
+    createdAt    DateTime @default(now()) // 기본 value는 이렇게 줄 수 있음
+    Item         Item[] // 내 글 보기 기능
+}
+
+model Item {
+    id          Int    @id @default(autoincrement())
+    title       String
+    description String
+    user        User   @relation(fields: [userId], references: [id]) // 작성자를 유저 모델이랑 relate
+    userId      Int
+}

@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "ES2022",                              
    		"module": "ES2022",
-   		"lib": ["ES2022"],   
+   		"lib": ["ESNext"],
 		"moduleResolution": "node",  
 		"allowSyntheticDefaultImports": true, // To provide backwards compatibility, Node.js allows you to import most CommonJS packages with a default import. This flag tells TypeScript that it's okay to use import on CommonJS modules.
 		"resolveJsonModule": false, // ESM doesn't yet support JSON modules.
@@ -23,7 +23,9 @@
 		"useDefineForClassFields": true,
 		"forceConsistentCasingInFileNames": true,
 		"skipLibCheck": true,
-    "rootDir": "./src",
-    "outDir": "./dist"
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"rootDir": "./src",
+		"outDir": "./dist"
 	}
 }

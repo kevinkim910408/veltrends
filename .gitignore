@@ -2,6 +2,7 @@ node_modules
 dist
 .vscode
 .env
+dev.db
 
 .history/*
 server/.history/*

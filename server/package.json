@@ -6,13 +6,17 @@
   "type": "module",
   "devDependencies": {
     "@fastify/swagger": "^7.4.1",
+    "@types/bcrypt": "^5.0.0",
     "nodemon": "^3.0.1",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@prisma/client": "^5.0.0",
+    "bcrypt": "^5.1.0",
     "fastify": "^4.20.0",
-    "pino-pretty": "^10.0.1"
+    "pino-pretty": "^10.0.1",
+    "prisma": "^5.0.0"
   },
   "scripts": {
     "start": "ts-node-esm --transpileOnly ./src/main.ts| pino-pretty",
