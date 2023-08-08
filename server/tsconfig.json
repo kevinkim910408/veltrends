@@ -13,7 +13,7 @@
 		"stripInternal": true,
 		"strict": true,
 		"noImplicitReturns": true,
-		"noImplicitOverride": true,
+		"noImplicitOverride": false,
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true,
